@@ -1,20 +1,45 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+// App.js
+import { createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
+import MostrarMaqueta from './screens/MostrarMaqueta';
+import HomeScreen from './screens/HomeScreen';
+import Login from './screens/Login';
+import Register from './screens/Register';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+const AppNavigator = createStackNavigator(
+  {
+    MostrarMaqueta: {
+      screen: MostrarMaqueta,
+      navigationOptions: {
+        title: 'Mostrar Maqueta',
+      },
+    },
+    HomeScreen: {
+      screen: HomeScreen,
+      navigationOptions: {
+        title: 'Home',
+      },
+    },
+
+    Register: {
+      screen: Register,
+      navigationOptions: {
+        title: 'Registrer',
+      },
+    },
+
+    Login: {
+      screen: Login,
+      navigationOptions: {
+        title: 'Login',
+      },
+    },
+    
   },
-});
+  {
+    initialRouteName: 'MostrarMaqueta',
+  }
+);
+
+export default createAppContainer(AppNavigator);
