@@ -7,8 +7,7 @@ const Login = ({ navigation }) => {
   const [modalVisible, setModalVisible] = useState(false);
 
   const handleLogin = () => {
-    // Lógica de inicio de sesión (puedes implementar según tus necesidades)
-    // Por ahora, simplemente navegará a la pantalla de bienvenida si se ingresan datos válidos
+    
     if (username === 'usuario' && password === 'contraseña') {
       navigation.navigate('Bienvenida');
     } else {
@@ -17,13 +16,12 @@ const Login = ({ navigation }) => {
   };
 
   const handleForgotPassword = () => {
-    // Lógica para manejar el olvido de contraseña (puedes implementar según tus necesidades)
-    // Por ahora, simplemente muestra un mensaje de alerta
+   //recuperar contraseña logica
     alert('Olvidaste tu contraseña');
   };
 
   const handleRegister = () => {
-    // Lógica para navegar a la pantalla de registro
+    // 
     navigation.navigate('Registro');
   };
 
@@ -93,19 +91,19 @@ const styles = StyleSheet.create({
     padding: 16,
   },
   logoContainer: {
-    alignItems: 'center', // Centrar la imagen horizontalmente
+    alignItems: 'center', 
     marginBottom: 16,
   },
   logo: {
-    width: 140, // Ancho de la imagen
-    height: 140, // Altura de la imagen
+    width: 140, 
+    height: 140, 
   },
   loginContainer: {
-    backgroundColor: 'rgba(255, 0, 0, 0.2)', // Fondo semi-transparente, color rojo
+    backgroundColor: 'rgba(255, 0, 0, 0.2)', 
     borderRadius: 10,
     padding: 16,
-    width: '80%', // Ancho del contenido
-    alignItems: 'center', // Centrar el contenido horizontalmente
+    width: '80%', 
+    alignItems: 'center', 
   },
   title: {
     fontSize: 24,
@@ -116,13 +114,13 @@ const styles = StyleSheet.create({
     width: '100%',
     borderBottomWidth: 1,
     borderColor: 'gray',
-    color: 'blue',  // Añade esta línea para cambiar el color del texto
+    color: 'blue', 
     marginBottom: 12,
     paddingLeft: 8,
   },
   backgroundImage: {
     flex: 1,
-    resizeMode: 'cover', // o 'stretch' según tus preferencias
+    resizeMode: 'cover',
     justifyContent: 'center',
   },
   modalContainer: {
@@ -152,14 +150,14 @@ const styles = StyleSheet.create({
     fontSize: 12,
   },
   loginButton: {
-    borderRadius: 20, // O cualquier valor que desees para hacer el botón redondeado
-    backgroundColor: 'red', // Cambia el color del botón
+    borderRadius: 20, 
+    backgroundColor: 'red', 
     padding: 10,
     width: '100%',
   },
   overlay: {
-    ...StyleSheet.absoluteFillObject, // Para cubrir toda la pantalla
-    backgroundColor: 'rgba(0, 0, 0, 0.5)', // Ajusta la opacidad según tus preferencias
+    ...StyleSheet.absoluteFillObject, 
+    backgroundColor: 'rgba(0, 0, 0, 0.5)', 
   },
 });
 

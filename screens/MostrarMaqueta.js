@@ -1,6 +1,7 @@
-// MostrarMaqueta.js
+
 import React from 'react';
 import { View, Button, StyleSheet } from 'react-native';
+
 
 const MostrarMaqueta = ({ navigation }) => {
   return (
@@ -18,6 +19,16 @@ const MostrarMaqueta = ({ navigation }) => {
       <Button
         title="Ir a Registro"
         onPress={() => navigation.navigate('Register')}
+      />
+      <View style={styles.separator} />
+      <Button
+        title="Menu Princiapl"
+        onPress={() => navigation.navigate('MenuP')}
+      />
+       <View style={styles.separator} />
+      <Button
+        title="Renta de Carros"
+        onPress={() => navigation.navigate('RentaCarro')}
       />
     </View>
   );

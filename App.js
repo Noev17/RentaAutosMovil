@@ -5,7 +5,8 @@ import MostrarMaqueta from './screens/MostrarMaqueta';
 import HomeScreen from './screens/HomeScreen';
 import Login from './screens/Login';
 import Register from './screens/Register';
-
+import MenuP from './screens/MenuPrincipal';
+import RentaDeCarros from './screens/RentaDeCarros';
 
 const AppNavigator = createStackNavigator(
   {
@@ -22,6 +23,13 @@ const AppNavigator = createStackNavigator(
       },
     },
 
+    MenuP: {
+      screen: MenuP,
+      navigationOptions: {
+        title: 'MenuP',
+      },
+    },
+
     Register: {
       screen: Register,
       navigationOptions: {
@@ -35,10 +43,16 @@ const AppNavigator = createStackNavigator(
         title: 'Login',
       },
     },
-    
+    RentaCarro: {
+      screen: RentaDeCarros,
+      navigationOptions: {
+        title: 'Renta de Carros',
+      },
+    },
   },
   {
     initialRouteName: 'MostrarMaqueta',
+    headerMode: 'none', // Esto oculta la barra de navegación
   }
 );
 
